@@ -1,0 +1,109 @@
+#!/bin/sh
+
+workfile="$TMPDIR/StandardKeyBinding.dict"
+second_workfile="$workfile.tmp"
+mapfile="$TMPDIR/key-code-map.txt"
+cleanup() {
+    rm "$workfile" "$mapfile"
+    rm -f "$second_workfile"
+}
+trap cleanup EXIT
+
+# copy system key bindings to the temp directory
+cp /System/Library/Frameworks/AppKit.framework/Resources/StandardKeyBinding.dict "$workfile"
+
+plutil -convert json "$workfile"
+python3 -m json.tool "$workfile" > "$second_workfile"
+cat "$second_workfile" > "$workfile"
+rm "$second_workfile"
+
+# taken from NSResponder.h
+cat <<'EOF' > "$mapfile"
+\\\uf700 NSUpArrowFunctionKey
+\\\uf701 NSDownArrowFunctionKey
+\\\uf702 NSLeftArrowFunctionKey
+\\\uf703 NSRightArrowFunctionKey
+\\\uf704 NSF1FunctionKey
+\\\uf705 NSF2FunctionKey
+\\\uf706 NSF3FunctionKey
+\\\uf707 NSF4FunctionKey
+\\\uf708 NSF5FunctionKey
+\\\uf709 NSF6FunctionKey
+\\\uf70a NSF7FunctionKey
+\\\uf70b NSF8FunctionKey
+\\\uf70c NSF9FunctionKey
+\\\uf70d NSF10FunctionKey
+\\\uf70e NSF11FunctionKey
+\\\uf70f NSF12FunctionKey
+\\\uf710 NSF13FunctionKey
+\\\uf711 NSF14FunctionKey
+\\\uf712 NSF15FunctionKey
+\\\uf713 NSF16FunctionKey
+\\\uf714 NSF17FunctionKey
+\\\uf715 NSF18FunctionKey
+\\\uf716 NSF19FunctionKey
+\\\uf717 NSF20FunctionKey
+\\\uf718 NSF21FunctionKey
+\\\uf719 NSF22FunctionKey
+\\\uf71a NSF23FunctionKey
+\\\uf71b NSF24FunctionKey
+\\\uf71c NSF25FunctionKey
+\\\uf71d NSF26FunctionKey
+\\\uf71e NSF27FunctionKey
+\\\uf71f NSF28FunctionKey
+\\\uf720 NSF29FunctionKey
+\\\uf721 NSF30FunctionKey
+\\\uf722 NSF31FunctionKey
+\\\uf723 NSF32FunctionKey
+\\\uf724 NSF33FunctionKey
+\\\uf725 NSF34FunctionKey
+\\\uf726 NSF35FunctionKey
+\\\uf727 NSInsertFunctionKey
+\\\uf728 NSDeleteFunctionKey
+\\\uf729 NSHomeFunctionKey
+\\\uf72a NSBeginFunctionKey
+\\\uf72b NSEndFunctionKey
+\\\uf72c NSPageUpFunctionKey
+\\\uf72d NSPageDownFunctionKey
+\\\uf72e NSPrintScreenFunctionKey
+\\\uf72f NSScrollLockFunctionKey
+\\\uf730 NSPauseFunctionKey
+\\\uf731 NSSysReqFunctionKey
+\\\uf732 NSBreakFunctionKey
+\\\uf733 NSResetFunctionKey
+\\\uf734 NSStopFunctionKey
+\\\uf735 NSMenuFunctionKey
+\\\uf736 NSUserFunctionKey
+\\\uf737 NSSystemFunctionKey
+\\\uf738 NSPrintFunctionKey
+\\\uf739 NSClearLineFunctionKey
+\\\uf73a NSClearDisplayFunctionKey
+\\\uf73b NSInsertLineFunctionKey
+\\\uf73c NSDeleteLineFunctionKey
+\\\uf73d NSInsertCharFunctionKey
+\\\uf73e NSDeleteCharFunctionKey
+\\\uf73f NSPrevFunctionKey
+\\\uf740 NSNextFunctionKey
+\\\uf741 NSSelectFunctionKey
+\\\uf742 NSExecuteFunctionKey
+\\\uf743 NSUndoFunctionKey
+\\\uf744 NSRedoFunctionKey
+\\\uf745 NSFindFunctionKey
+\\\uf746 NSHelpFunctionKey
+\\\uf747 NSModeSwitchFunctionKey
+EOF
+
+cat <<'EOF' >> "$mapfile"
+\\\u007f RegularDelete
+\\\u0003 Return
+\\\u0019 BackTab
+\\\u001b Escape
+EOF
+
+while IFS= read -r line; do
+    code=$(echo "$line" | awk '{ print $1 }')
+    desc=$(echo "$line" | awk '{ print $2 }')
+    sed -i '' "s/$code/$desc/g" "$workfile"
+done < "$mapfile"
+
+cat "$workfile"
