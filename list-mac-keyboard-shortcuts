@@ -19,78 +19,78 @@ rm "$second_workfile"
 
 # taken from NSResponder.h
 cat <<'EOF' > "$mapfile"
-\\\uf700 NSUpArrowFunctionKey
-\\\uf701 NSDownArrowFunctionKey
-\\\uf702 NSLeftArrowFunctionKey
-\\\uf703 NSRightArrowFunctionKey
-\\\uf704 NSF1FunctionKey
-\\\uf705 NSF2FunctionKey
-\\\uf706 NSF3FunctionKey
-\\\uf707 NSF4FunctionKey
-\\\uf708 NSF5FunctionKey
-\\\uf709 NSF6FunctionKey
-\\\uf70a NSF7FunctionKey
-\\\uf70b NSF8FunctionKey
-\\\uf70c NSF9FunctionKey
-\\\uf70d NSF10FunctionKey
-\\\uf70e NSF11FunctionKey
-\\\uf70f NSF12FunctionKey
-\\\uf710 NSF13FunctionKey
-\\\uf711 NSF14FunctionKey
-\\\uf712 NSF15FunctionKey
-\\\uf713 NSF16FunctionKey
-\\\uf714 NSF17FunctionKey
-\\\uf715 NSF18FunctionKey
-\\\uf716 NSF19FunctionKey
-\\\uf717 NSF20FunctionKey
-\\\uf718 NSF21FunctionKey
-\\\uf719 NSF22FunctionKey
-\\\uf71a NSF23FunctionKey
-\\\uf71b NSF24FunctionKey
-\\\uf71c NSF25FunctionKey
-\\\uf71d NSF26FunctionKey
-\\\uf71e NSF27FunctionKey
-\\\uf71f NSF28FunctionKey
-\\\uf720 NSF29FunctionKey
-\\\uf721 NSF30FunctionKey
-\\\uf722 NSF31FunctionKey
-\\\uf723 NSF32FunctionKey
-\\\uf724 NSF33FunctionKey
-\\\uf725 NSF34FunctionKey
-\\\uf726 NSF35FunctionKey
-\\\uf727 NSInsertFunctionKey
-\\\uf728 NSDeleteFunctionKey
-\\\uf729 NSHomeFunctionKey
-\\\uf72a NSBeginFunctionKey
-\\\uf72b NSEndFunctionKey
-\\\uf72c NSPageUpFunctionKey
-\\\uf72d NSPageDownFunctionKey
-\\\uf72e NSPrintScreenFunctionKey
-\\\uf72f NSScrollLockFunctionKey
-\\\uf730 NSPauseFunctionKey
-\\\uf731 NSSysReqFunctionKey
-\\\uf732 NSBreakFunctionKey
-\\\uf733 NSResetFunctionKey
-\\\uf734 NSStopFunctionKey
-\\\uf735 NSMenuFunctionKey
-\\\uf736 NSUserFunctionKey
-\\\uf737 NSSystemFunctionKey
-\\\uf738 NSPrintFunctionKey
-\\\uf739 NSClearLineFunctionKey
-\\\uf73a NSClearDisplayFunctionKey
-\\\uf73b NSInsertLineFunctionKey
-\\\uf73c NSDeleteLineFunctionKey
-\\\uf73d NSInsertCharFunctionKey
-\\\uf73e NSDeleteCharFunctionKey
-\\\uf73f NSPrevFunctionKey
-\\\uf740 NSNextFunctionKey
-\\\uf741 NSSelectFunctionKey
-\\\uf742 NSExecuteFunctionKey
-\\\uf743 NSUndoFunctionKey
-\\\uf744 NSRedoFunctionKey
-\\\uf745 NSFindFunctionKey
-\\\uf746 NSHelpFunctionKey
-\\\uf747 NSModeSwitchFunctionKey
+\\\uf700 UpArrow
+\\\uf701 DownArrow
+\\\uf702 LeftArrow
+\\\uf703 RightArrow
+\\\uf704 F1
+\\\uf705 F2
+\\\uf706 F3
+\\\uf707 F4
+\\\uf708 F5
+\\\uf709 F6
+\\\uf70a F7
+\\\uf70b F8
+\\\uf70c F9
+\\\uf70d F10
+\\\uf70e F11
+\\\uf70f F12
+\\\uf710 F13
+\\\uf711 F14
+\\\uf712 F15
+\\\uf713 F16
+\\\uf714 F17
+\\\uf715 F18
+\\\uf716 F19
+\\\uf717 F20
+\\\uf718 F21
+\\\uf719 F22
+\\\uf71a F23
+\\\uf71b F24
+\\\uf71c F25
+\\\uf71d F26
+\\\uf71e F27
+\\\uf71f F28
+\\\uf720 F29
+\\\uf721 F30
+\\\uf722 F31
+\\\uf723 F32
+\\\uf724 F33
+\\\uf725 F34
+\\\uf726 F35
+\\\uf727 InsertFunctionKey
+\\\uf728 DeleteFunctionKey
+\\\uf729 HomeFunctionKey
+\\\uf72a BeginFunctionKey
+\\\uf72b EndFunctionKey
+\\\uf72c PageUpFunctionKey
+\\\uf72d PageDownFunctionKey
+\\\uf72e PrintScreenFunctionKey
+\\\uf72f ScrollLockFunctionKey
+\\\uf730 PauseFunctionKey
+\\\uf731 SysReqFunctionKey
+\\\uf732 BreakFunctionKey
+\\\uf733 ResetFunctionKey
+\\\uf734 StopFunctionKey
+\\\uf735 MenuFunctionKey
+\\\uf736 UserFunctionKey
+\\\uf737 SystemFunctionKey
+\\\uf738 PrintFunctionKey
+\\\uf739 ClearLineFunctionKey
+\\\uf73a ClearDisplayFunctionKey
+\\\uf73b InsertLineFunctionKey
+\\\uf73c DeleteLineFunctionKey
+\\\uf73d InsertCharFunctionKey
+\\\uf73e DeleteCharFunctionKey
+\\\uf73f PrevFunctionKey
+\\\uf740 NextFunctionKey
+\\\uf741 SelectFunctionKey
+\\\uf742 ExecuteFunctionKey
+\\\uf743 UndoFunctionKey
+\\\uf744 RedoFunctionKey
+\\\uf745 FindFunctionKey
+\\\uf746 HelpFunctionKey
+\\\uf747 ModeSwitchFunctionKey
 EOF
 
 cat <<'EOF' >> "$mapfile"
@@ -105,5 +105,9 @@ while IFS= read -r line; do
     desc=$(echo "$line" | awk '{ print $2 }')
     sed -i '' "s/$code/$desc/g" "$workfile"
 done < "$mapfile"
+
+sed -i '' 's/\$/⇧/g' "$workfile"
+sed -i '' 's/@/⌘/g' "$workfile"
+sed -i '' 's/~/⌥/g' "$workfile"
 
 cat "$workfile"
