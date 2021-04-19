@@ -8,7 +8,7 @@ I'm not certain of Return or BackTab, but those are my best guesses.
 
 Requires MacOS. Ignores your customized ones in ~/Library/KeyBindings/.
 
-* `⌘` is Command
-* `^` is Control
-* `⌥` is Option/Alt
-* `⇧` is Shift
+* <kbd>⌘</kbd> is Command
+* <kbd>^</kbd> is Control
+* <kbd>⌥</kbd> is Option/Alt
+* <kbd>⇧</kbd> is Shift
