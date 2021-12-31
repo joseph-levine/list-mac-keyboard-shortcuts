@@ -1,105 +1,106 @@
-<kbd>RegularDelete</kbd>: deleteBackward
-<kbd>^\t</kbd>: selectNextKeyView
-<kbd>^V</kbd>: pageDownAndModifySelection
-<kbd>^\n</kbd>: insertLineBreak
-<kbd>Return</kbd>: insertNewline
-<kbd>^\r</kbd>: insertLineBreak
-<kbd>\b</kbd>: deleteBackward
-<kbd>⌘^&#8595;</kbd>: makeBaseWritingDirectionNatural
-<kbd>\t</kbd>: insertTab
-<kbd>\n</kbd>: insertNewline
-<kbd>⌘^&#8592;</kbd>: makeBaseWritingDirectionRightToLeft
-<kbd>\r</kbd>: insertNewline
-<kbd>⌘^&#8594;</kbd>: makeBaseWritingDirectionLeftToRight
-<kbd>^a</kbd>: moveToBeginningOfParagraph
-<kbd>^b</kbd>: moveBackward
-<kbd>⌘⌥ </kbd>: cycleToNextInputKeyboardLayout
-<kbd>^d</kbd>: deleteForward
-<kbd>BackTab</kbd>: insertBacktab
-<kbd>^e</kbd>: moveToEndOfParagraph
-<kbd>⌥^RegularDelete</kbd>: deleteWordBackward
-<kbd>^BackTab</kbd>: selectPreviousKeyView
-<kbd>Escape</kbd>: cancelOperation
-<kbd>^f</kbd>: moveForward
-<kbd>^h</kbd>: deleteBackward
-<kbd>⌥DeleteFunctionKey</kbd>: deleteWordForward
-<kbd>^k</kbd>: deleteToEndOfParagraph
-<kbd>⌥Return</kbd>: insertNewlineIgnoringFieldEditor
-<kbd>^l</kbd>: centerSelectionInVisibleArea
-<kbd>&#8593;</kbd>: moveUp
-<kbd>&#8595;</kbd>: moveDown
-<kbd>⌥PageUpFunctionKey</kbd>: pageUp
-<kbd>⇧HomeFunctionKey</kbd>: moveToBeginningOfDocumentAndModifySelection
-<kbd>&#8592;</kbd>: moveLeft
-<kbd>&#8594;</kbd>: moveRight
-<kbd>⌥PageDownFunctionKey</kbd>: pageDown
-<kbd>^n</kbd>: moveDown
-<kbd>^"</kbd>: insertDoubleQuoteIgnoringSubstitution
-<kbd>⇧EndFunctionKey</kbd>: moveToEndOfDocumentAndModifySelection
-<kbd>^o</kbd>: insertNewlineIgnoringFieldEditor, moveBackward
-<kbd>⇧PageUpFunctionKey</kbd>: pageUpAndModifySelection
-<kbd>^p</kbd>: moveUp
-<kbd>⌥\b</kbd>: deleteWordBackward
-<kbd>⇧PageDownFunctionKey</kbd>: pageDownAndModifySelection
-<kbd>F5</kbd>: complete
-<kbd>⌥\t</kbd>: insertTabIgnoringFieldEditor
-<kbd>^&#8593;</kbd>: scrollPageUp
-<kbd>⌥\n</kbd>: insertNewlineIgnoringFieldEditor
-<kbd>^&#8595;</kbd>: scrollPageDown
-<kbd>^&#8592;</kbd>: moveToLeftEndOfLine
-<kbd>^'</kbd>: insertSingleQuoteIgnoringSubstitution
-<kbd>^t</kbd>: transpose
-<kbd>^&#8594;</kbd>: moveToRightEndOfLine
-<kbd>⌥\r</kbd>: insertNewlineIgnoringFieldEditor
-<kbd>^v</kbd>: pageDown
-<kbd>^y</kbd>: yank
-<kbd>^/</kbd>: insertRightToLeftSlash
-<kbd>⌥^b</kbd>: moveWordBackward
-<kbd>^RegularDelete</kbd>: deleteBackwardByDecomposingPreviousCharacter
-<kbd>⌥Escape</kbd>: complete
-<kbd>DeleteFunctionKey</kbd>: deleteForward
-<kbd>HomeFunctionKey</kbd>: scrollToBeginningOfDocument
-<kbd>⌥^f</kbd>: moveWordForward
-<kbd>EndFunctionKey</kbd>: scrollToEndOfDocument
-<kbd>PageUpFunctionKey</kbd>: scrollPageUp
-<kbd>PageDownFunctionKey</kbd>: scrollPageDown
-<kbd>⌘ </kbd>: cycleToNextInputScript
-<kbd>⌘&#8593;</kbd>: moveToBeginningOfDocument
-<kbd>⌘⌥^&#8595;</kbd>: makeTextWritingDirectionNatural
-<kbd>⌘&#8595;</kbd>: moveToEndOfDocument
-<kbd>"⌥&#8593;</kbd>: moveBackward, moveToBeginningOfParagraph
-<kbd>^A</kbd>: moveToBeginningOfParagraphAndModifySelection
-<kbd>⌘&#8592;</kbd>: moveToLeftEndOfLine
-<kbd>⌥&#8595;</kbd>: moveForward,moveToEndOfParagraph
-<kbd>^B</kbd>: moveBackwardAndModifySelection
-<kbd>ClearLineFunctionKey</kbd>: delete
-<kbd>⌘&#8594;</kbd>: moveToRightEndOfLine
-<kbd>⌥&#8592;</kbd>: moveWordLeft
-<kbd>⌥&#8594;</kbd>: moveWordRight
-<kbd>⌘⌥^&#8592;</kbd>: makeTextWritingDirectionRightToLeft
-<kbd>⇧&#8593;</kbd>: moveUpAndModifySelection
-<kbd>⌥^B</kbd>: moveWordBackwardAndModifySelection
-<kbd>^⇧&#8592;</kbd>: moveToLeftEndOfLineAndModifySelection
-<kbd>^E</kbd>: moveToEndOfParagraphAndModifySelection
-<kbd>⇧&#8595;</kbd>: moveDownAndModifySelection
-<kbd>⌘⇧&#8593;</kbd>: moveToBeginningOfDocumentAndModifySelection
-<kbd>^F</kbd>: moveForwardAndModifySelection
-<kbd>⇧&#8592;</kbd>: moveLeftAndModifySelection
-<kbd>^⇧&#8594;</kbd>: moveToRightEndOfLineAndModifySelection
-<kbd>⌘⇧&#8595;</kbd>: moveToEndOfDocumentAndModifySelection
-<kbd>⇧&#8594;</kbd>: moveRightAndModifySelection
-<kbd>⌘⌥^&#8594;</kbd>: makeTextWritingDirectionLeftToRight
-<kbd>⌥⇧&#8593;</kbd>: moveParagraphBackwardAndModifySelection
-<kbd>⌘⇧&#8592;</kbd>: moveToLeftEndOfLineAndModifySelection
-<kbd>⌘.</kbd>: cancelOperation
-<kbd>⌥⇧&#8595;</kbd>: moveParagraphForwardAndModifySelection
-<kbd>⌘⇧&#8594;</kbd>: moveToRightEndOfLineAndModifySelection
-<kbd>⌥^F</kbd>: moveWordForwardAndModifySelection
-<kbd>⌥⇧&#8592;</kbd>: moveWordLeftAndModifySelection
-<kbd>⌥⇧&#8594;</kbd>: moveWordRightAndModifySelection
-<kbd>⌘RegularDelete</kbd>: deleteToBeginningOfLine
-<kbd>^N</kbd>: moveDownAndModifySelection
-<kbd>⌥RegularDelete</kbd>: deleteWordBackward
-<kbd>^Return</kbd>: insertLineBreak
-<kbd>⌘^ </kbd>: togglePlatformInputSystem
-<kbd>^P</kbd>: moveUpAndModifySelection
+# Current List
+* <kbd>RegularDelete</kbd>: deleteBackward
+* <kbd>^\t</kbd>: selectNextKeyView
+* <kbd>^V</kbd>: pageDownAndModifySelection
+* <kbd>^\n</kbd>: insertLineBreak
+* <kbd>Return</kbd>: insertNewline
+* <kbd>^\r</kbd>: insertLineBreak
+* <kbd>\b</kbd>: deleteBackward
+* <kbd>⌘^&#8595;</kbd>: makeBaseWritingDirectionNatural
+* <kbd>\t</kbd>: insertTab
+* <kbd>\n</kbd>: insertNewline
+* <kbd>⌘^&#8592;</kbd>: makeBaseWritingDirectionRightToLeft
+* <kbd>\r</kbd>: insertNewline
+* <kbd>⌘^&#8594;</kbd>: makeBaseWritingDirectionLeftToRight
+* <kbd>^a</kbd>: moveToBeginningOfParagraph
+* <kbd>^b</kbd>: moveBackward
+* <kbd>⌘⌥ </kbd>: cycleToNextInputKeyboardLayout
+* <kbd>^d</kbd>: deleteForward
+* <kbd>BackTab</kbd>: insertBacktab
+* <kbd>^e</kbd>: moveToEndOfParagraph
+* <kbd>⌥^RegularDelete</kbd>: deleteWordBackward
+* <kbd>^BackTab</kbd>: selectPreviousKeyView
+* <kbd>Escape</kbd>: cancelOperation
+* <kbd>^f</kbd>: moveForward
+* <kbd>^h</kbd>: deleteBackward
+* <kbd>⌥DeleteFunctionKey</kbd>: deleteWordForward
+* <kbd>^k</kbd>: deleteToEndOfParagraph
+* <kbd>⌥Return</kbd>: insertNewlineIgnoringFieldEditor
+* <kbd>^l</kbd>: centerSelectionInVisibleArea
+* <kbd>&#8593;</kbd>: moveUp
+* <kbd>&#8595;</kbd>: moveDown
+* <kbd>⌥PageUpFunctionKey</kbd>: pageUp
+* <kbd>⇧HomeFunctionKey</kbd>: moveToBeginningOfDocumentAndModifySelection
+* <kbd>&#8592;</kbd>: moveLeft
+* <kbd>&#8594;</kbd>: moveRight
+* <kbd>⌥PageDownFunctionKey</kbd>: pageDown
+* <kbd>^n</kbd>: moveDown
+* <kbd>^"</kbd>: insertDoubleQuoteIgnoringSubstitution
+* <kbd>⇧EndFunctionKey</kbd>: moveToEndOfDocumentAndModifySelection
+* <kbd>^o</kbd>: insertNewlineIgnoringFieldEditor, moveBackward
+* <kbd>⇧PageUpFunctionKey</kbd>: pageUpAndModifySelection
+* <kbd>^p</kbd>: moveUp
+* <kbd>⌥\b</kbd>: deleteWordBackward
+* <kbd>⇧PageDownFunctionKey</kbd>: pageDownAndModifySelection
+* <kbd>F5</kbd>: complete
+* <kbd>⌥\t</kbd>: insertTabIgnoringFieldEditor
+* <kbd>^&#8593;</kbd>: scrollPageUp
+* <kbd>⌥\n</kbd>: insertNewlineIgnoringFieldEditor
+* <kbd>^&#8595;</kbd>: scrollPageDown
+* <kbd>^&#8592;</kbd>: moveToLeftEndOfLine
+* <kbd>^'</kbd>: insertSingleQuoteIgnoringSubstitution
+* <kbd>^t</kbd>: transpose
+* <kbd>^&#8594;</kbd>: moveToRightEndOfLine
+* <kbd>⌥\r</kbd>: insertNewlineIgnoringFieldEditor
+* <kbd>^v</kbd>: pageDown
+* <kbd>^y</kbd>: yank
+* <kbd>^/</kbd>: insertRightToLeftSlash
+* <kbd>⌥^b</kbd>: moveWordBackward
+* <kbd>^RegularDelete</kbd>: deleteBackwardByDecomposingPreviousCharacter
+* <kbd>⌥Escape</kbd>: complete
+* <kbd>DeleteFunctionKey</kbd>: deleteForward
+* <kbd>HomeFunctionKey</kbd>: scrollToBeginningOfDocument
+* <kbd>⌥^f</kbd>: moveWordForward
+* <kbd>EndFunctionKey</kbd>: scrollToEndOfDocument
+* <kbd>PageUpFunctionKey</kbd>: scrollPageUp
+* <kbd>PageDownFunctionKey</kbd>: scrollPageDown
+* <kbd>⌘ </kbd>: cycleToNextInputScript
+* <kbd>⌘&#8593;</kbd>: moveToBeginningOfDocument
+* <kbd>⌘⌥^&#8595;</kbd>: makeTextWritingDirectionNatural
+* <kbd>⌘&#8595;</kbd>: moveToEndOfDocument
+* <kbd>"⌥&#8593;</kbd>: moveBackward, moveToBeginningOfParagraph
+* <kbd>^A</kbd>: moveToBeginningOfParagraphAndModifySelection
+* <kbd>⌘&#8592;</kbd>: moveToLeftEndOfLine
+* <kbd>⌥&#8595;</kbd>: moveForward,moveToEndOfParagraph
+* <kbd>^B</kbd>: moveBackwardAndModifySelection
+* <kbd>ClearLineFunctionKey</kbd>: delete
+* <kbd>⌘&#8594;</kbd>: moveToRightEndOfLine
+* <kbd>⌥&#8592;</kbd>: moveWordLeft
+* <kbd>⌥&#8594;</kbd>: moveWordRight
+* <kbd>⌘⌥^&#8592;</kbd>: makeTextWritingDirectionRightToLeft
+* <kbd>⇧&#8593;</kbd>: moveUpAndModifySelection
+* <kbd>⌥^B</kbd>: moveWordBackwardAndModifySelection
+* <kbd>^⇧&#8592;</kbd>: moveToLeftEndOfLineAndModifySelection
+* <kbd>^E</kbd>: moveToEndOfParagraphAndModifySelection
+* <kbd>⇧&#8595;</kbd>: moveDownAndModifySelection
+* <kbd>⌘⇧&#8593;</kbd>: moveToBeginningOfDocumentAndModifySelection
+* <kbd>^F</kbd>: moveForwardAndModifySelection
+* <kbd>⇧&#8592;</kbd>: moveLeftAndModifySelection
+* <kbd>^⇧&#8594;</kbd>: moveToRightEndOfLineAndModifySelection
+* <kbd>⌘⇧&#8595;</kbd>: moveToEndOfDocumentAndModifySelection
+* <kbd>⇧&#8594;</kbd>: moveRightAndModifySelection
+* <kbd>⌘⌥^&#8594;</kbd>: makeTextWritingDirectionLeftToRight
+* <kbd>⌥⇧&#8593;</kbd>: moveParagraphBackwardAndModifySelection
+* <kbd>⌘⇧&#8592;</kbd>: moveToLeftEndOfLineAndModifySelection
+* <kbd>⌘.</kbd>: cancelOperation
+* <kbd>⌥⇧&#8595;</kbd>: moveParagraphForwardAndModifySelection
+* <kbd>⌘⇧&#8594;</kbd>: moveToRightEndOfLineAndModifySelection
+* <kbd>⌥^F</kbd>: moveWordForwardAndModifySelection
+* <kbd>⌥⇧&#8592;</kbd>: moveWordLeftAndModifySelection
+* <kbd>⌥⇧&#8594;</kbd>: moveWordRightAndModifySelection
+* <kbd>⌘RegularDelete</kbd>: deleteToBeginningOfLine
+* <kbd>^N</kbd>: moveDownAndModifySelection
+* <kbd>⌥RegularDelete</kbd>: deleteWordBackward
+* <kbd>^Return</kbd>: insertLineBreak
+* <kbd>⌘^ </kbd>: togglePlatformInputSystem
+* <kbd>^P</kbd>: moveUpAndModifySelection
